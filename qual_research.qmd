@@ -1,0 +1,752 @@
+---
+title: "Researching Data Science Education: Perspectives on Qualitative Research Methods"
+author: "Dr. Allison Theobold"
+format: 
+  revealjs:
+    logo: images/cp_hex_logo.png
+    theme: night
+    embed-resources: true
+    standalone: true
+editor: visual
+bibliography: references.bib
+---
+
+::: {style="font-size: 3em; color: #FFFFFF;"}
+Today's layout
+:::
+
+. . .
+
+</br>
+
+1.  Some background on qualitative research
+
+. . .
+
+2.  Qualitative investigations into student's code
+
+. . .
+
+3.  Qualitative investigations into group work
+
+. . .
+
+4.  Implications for oral assessments
+
+. . .
+
+<center><http://bit.ly/qual-research-duke></center>
+
+## 
+
+::: {style="font-size: 3em; color: #FFFFFF;"}
+A bit about me...
+:::
+
+::: columns
+::: {.column width="40%"}
+::: {style="font-size: 0.75em; color: #FFFFFF;"}
+Ph.D. in Statistics from Montana State University
+
+> "Supporting Data-Intensive Environmental Science Research: Data Science Skills for Scientific Practitioners of Statistics"
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="55%"}
+```{r}
+#| out-width: 80%
+knitr::include_graphics("images/buchon.JPG")
+```
+:::
+:::
+
+## 
+
+::: {style="font-size: 3em; color: #FFFFFF;"}
+Land acknowledgement
+:::
+
+::: {style="font-size: 0.75em;"}
+The Research Triangle sits on the territory of several Native nations, including the Tutelo and Saponi speaking peoples. We acknowledge, respect, and thank the tribes on whose stolen land we are guests.
+
+Indigenous people are not relics of the past. We who work and live here must acknowledge past violence and ongoing harm produced by the continued effects of colonization.
+:::
+
+##  {background-color="#B6CADA"}
+
+::: {style="font-size: 4em; color: #000000;"}
+Qualitative research
+:::
+
+::: columns
+::: {.column width="60%"}
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="25%"}
+```{r}
+knitr::include_graphics("images/qual-research.png")
+```
+:::
+:::
+
+## 
+
+::: {style="font-size: 1.25em; color: #e28743;"}
+"Qualitative researchers strive to *understand the meaning* people have constructed about their world and their experiences." [@merriam]
+:::
+
+</br>
+
+::: {style="font-size: 1.25em; color: #abdbe3;"}
+"Qualitative research is an effort to understand situations in their uniqueness as part of a particular context and the interactions there. This understanding is an end in itself." [@patton]
+:::
+
+## 
+
+::: {style="font-size: 2em; color: #FFFFFF;"}
+What are the principles of qualitative research?
+:::
+
+. . .
+
+::: columns
+::: {.column width="55%"}
+::: {style="font-size: 0.85em;"}
+</br>
+
+-   The researcher is the primary instrument for data collection and data analysis
+
+-   The analysis seeks to find emerging themes
+
+-   The product of a qualitative study is richly descriptive
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%"}
+![](images/qual_words.png)
+:::
+:::
+
+## 
+
+::: {style="font-size: 2em; color: #FFFFFF;"}
+How might this look?
+:::
+
+</br>
+
+::: columns
+::: {.column width="30%"}
+**Sample Selection**
+
+Select a sample from which the most can be learned!
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="30%"}
+**Data Collection**
+
+Major sources of data -- interviews, observations, documents
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="30%"}
+**Data Analysis**
+
+<!-- Simultaneous with data collection! -->
+
+Compare units of data to find common patterns across the data
+:::
+:::
+
+##  {background-color="#B6CADA"}
+
+::: {style="font-size: 3em; color: #000000;"}
+Investigating student learning through code
+:::
+
+::: columns
+::: {.column width="60%"}
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="25%"}
+```{r}
+knitr::include_graphics("images/code-design.png")
+```
+:::
+:::
+
+## 
+
+::: {style="font-size: 3em; color: #FFFFFF;"}
+Warm-up (90 seconds)
+:::
+
+</br>
+
+<center>
+
+::: {style="font-size: 1.5em; color: #e28743;"}
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+RPMA2GrowthSub$Weight[RPMA2GrowthSub$Age == 1]
+```
+:::
+
+</center>
+
+. . .
+
+</br>
+
+::: {style="font-size: 1.5em; color: #e28743;"}
+How would you describe the action(s) being taken in this statement?
+:::
+
+## 
+
+::: {style="font-size: 2em; color: #FFFFFF;"}
+A framework for analyzing student's code [@schulte2008]
+:::
+
+::: {style="font-size: 0.5em;"}
+|                    | Text Surface                                                              | Program Execution                                                      | Function                                                                                   |
+|:------------------|------------------|------------------|------------------|
+| **Macrostructure** | Understanding the overall structure of the program                        | Understanding the "algorithm" of the program                           | Understanding the goal / purpose of the program (in its context)                           |
+| **Relations**      | References between blocks, e.g., method calls, object creation            | Sequence of method calls, object sequence diagrams                     | Understanding how sub-goals are related to goals, how function is achieved by subfunctions |
+| **Blocks**         | Regions of interest (ROI) that syntactically or semantically build a unit | Operation of a block, a method, or a ROI (as a sequence of statements) | Function of a block, may be seen as a sub-goal                                             |
+| **Atoms**          | Language elements                                                         | Operation of a statement                                               | Function of a statement, only understandable in context                                    |
+:::
+
+## 
+
+::: {style="font-size: 2.5em; color: #FFFFFF;"}
+Coding student's code
+:::
+
+</br>
+
+::: {style="font-size: 1.25em;"}
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+RPMA2GrowthSub$Weight[RPMA2GrowthSub$Age == 1]
+```
+:::
+
+. . .
+
+</br>
+
+::: columns
+::: {.column width="45%"}
+**Descriptive code**
+
+::: {style="font-size: 0.75em;"}
+> "Filters a vector of values using extraction operator, based on an equality relation with a variable selected from dataframe using `$` operator"
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="45%"}
+**In-vivo code**
+
+::: {style="font-size: 0.75em;"}
+> "Uses `[ ]` and `==` to filter vector, uses `$` to select variable"
+:::
+:::
+:::
+
+## 
+
+::: {style="font-size: 2em; color: #FFFFFF;"}
+Uncovering emergent themes
+:::
+
+::: {style="font-size: 0.75em;"}
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+
+linearAnterior <- lm(PADataNoOutlier$Lipid ~ PADataNoOutlier$PSUA)
+
+early <- subset(RPMA2Growth, StockYear < 2006)	
+
+Weight5 <- mean(RPMA2GrowthSub$Weight[RPMA2GrowthSub$Age == 5], na.rm = TRUE)
+
+gas <- gas[!(substr(gas$sampleID,3,3) %in% c("b","c")), ]	
+
+obsD <- subset(gas, gas$carboy == "D")$N15_N2_Ar
+
+lowerCIBound <- pMat[1:mlleIndex,1][which.min(abs(mlleCI+likelihoods[1:mlleIndex]))]
+```
+:::
+
+<!-- </br> -->
+
+::: columns
+::: {.column width="50%"}
+**Data wrangling**
+
+::: {style="font-size: 0.65em;"}
+> Statements of code whose purpose is to prepare a dataset for analysis and / or visualization
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="45%"}
+::: {style="font-size: 0.75em;"}
+**Sub-themes**
+
+-   selecting variables
+-   filtering observations
+-   mutating variables
+:::
+:::
+:::
+
+## 
+
+::: {style="font-size: 2em; color: #FFFFFF;"}
+An alternative direction
+:::
+
+</br>
+
+::: columns
+::: {.column width="20%"}
+::: {style="font-size: 1.5em; color: #FFFFFF;"}
+Process coding:
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="75%"}
+::: {style="font-size: 0.75em; color: #FFFFFF;"}
+> uses gerunds ("-ing" words) to connote action in the data [@saldana]
+
+:::
+:::
+:::
+
+. . .
+
+</br>
+
+::: {style="font-size: 0.75em;"}
+- Particularly relevant to describing the processes of human actions
+  + can be "strategic, routine, random, novel, automatic, and / or thoughtful" [@corbin, p. 247]. 
+  
+- Can be intertwined with time, such that actions can emerge, change, or occur in particular sequences.
+:::
+
+## 
+
+::: {style="font-size: 2em; color: #FFFFFF;"}
+Practical considerations
+:::
+
+::: columns
+::: {.column width="45%"}
+**How much code should I collect?**
+
+::: {style="font-size: 0.75em;"}
+::: incremental
+-   Driven by the research question!
+    -   Amount of each student's code
+    -   Number of students
+:::
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="45%"}
+**How do readers trust my analysis?**
+
+::: {style="font-size: 0.75em;"}
+::: incremental
+-   Trust comes from:
+
+    -   confirmability
+    -   reliability
+    -   credibility
+    -   transferability
+:::
+:::
+:::
+:::
+
+. . .
+
+</br> Excellent resources: Creswell & Poth [-@creswell]; Merriam & Tisdell [-@merriam-tisdell]; Miles et al. [-@miles]
+
+<!-- researcher bias -->
+
+<!-- stable across researchers -->
+
+<!-- findings paint authentic portrait of data -->
+
+<!-- conclusions can be transferred to other contexts  -->
+
+## 
+
+::: {style="font-size: 2em; color: #FFFFFF;"}
+How could this be used?
+:::
+
+::: columns
+::: {.column width="22%"}
+::: {style="font-size: 0.95em;"}
+**Concept dependence**
+:::
+
+::: {style="font-size: 0.65em;"}
+> How does a student's concept model of a dataset inform how they filter data?
+
+(atoms; program execution)
+:::
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="22%"}
+::: {style="font-size: 0.95em;"}
+**Program environment**
+:::
+
+::: {style="font-size: 0.65em;"}
+> How do the visualizations produced by students who learn ggplot differ from those who learn "base" R?
+
+(blocks; program execution)
+:::
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="22%"}
+::: {style="font-size: 0.95em;"}
+**Linguistic structure**
+:::
+
+::: {style="font-size: 0.65em;"}
+> How do students name objects they will use later?
+
+(relationships; text)
+:::
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="22%"}
+::: {style="font-size: 0.95em;"}
+**Learning trajectory**
+:::
+
+::: {style="font-size: 0.65em;"}
+> How do students' exploratory data analyses change over the duration of a course?
+
+(macrostructure; function / purpose)
+:::
+:::
+:::
+
+## 
+
+::: {style="font-size: 2em; color: #FFFFFF;"}
+Why is this important for data science education?
+:::
+Theobold et al. [-@theobold-jsdse]
+
+. . .
+
+</br>
+
+::: {style="font-size: 1.5em; color: #e28743;"}
+How can we distinguish merely interesting learning from effective learning [@wiggins]?
+:::
+
+##  {background-color="#B6CADA"}
+
+::: {style="font-size: 3em; color: #000000;"}
+Investigating group collaborations
+:::
+
+::: columns
+::: {.column width="60%"}
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="25%"}
+```{r}
+#| out-width: 80%
+knitr::include_graphics("images/talking.png")
+```
+:::
+:::
+
+## 
+
+::: {style="font-size: 3em; color: #FFFFFF;"}
+Another warm-up 😊
+:::
+
+. . .
+
+::: columns
+::: {.column width="60%"}
+:::
+
+::: {.column width="40%"}
+::: {style="color: #e28743; font-size: 1.5em"}
+(2-minutes)
+:::
+:::
+:::
+
+Read through the dialogue on the back page of the handout. Consider how students are using language to:
+
+-   Build community and / or collaboration
+-   Position (mathematical) thinking as significant
+
+
+
+## Discorse Analysis
+
+::: {style="font-size: 0.75em;"}
+> is the study of language (structure, form, and syntax). Paired with the study of language-in-use, discourse analysis allows us to study how language is used to create and enact identities [@gee].
+:::
+
+. . .
+
+</br>
+
+::: {style="font-size: 1.25em;"}
+Language is used to build:
+:::
+
+::: columns
+::: {.column width="40%"}
+::: {style="font-size: 0.75em;"}
+-   Significance
+-   Practices
+-   Culturally supported activities
+-   Identities
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="55%"}
+::: {style="font-size: 0.75em;"}
+-   Relationships
+-   Politics
+-   Connections
+-   Sign systems and knowledge
+:::
+:::
+:::
+
+## 
+
+::: {style="font-size: 2.5em; color: #e28743;"}
+Revisiting Uma & Sean
+:::
+
+. . .
+
+</br>
+
+::: {style="font-size: 0.85em;"}
+This time consider if and how Uma's language [differs]{style="color: #e28743;"} from Sean's to accomplish the two building tasks:
+
+-   Build collaboration for mathematics learning or problem solving. *How are collaborations being fostered or discouraged?*
+
+-   Establish mathematical significance. *Whose thinking is being positioned as significant? By whom? How?*
+:::
+
+<center>
+
+</br>
+
+::: {style="color: #76b5c5;"}
+Be prepared to share!
+:::
+
+## 
+
+::: {style="font-size: 3em; color: #FFFFFF;"}
+Results & Claims
+:::
+
+```{r}
+#| out-width: 95%
+#| fig-align: center
+knitr::include_graphics("images/uma_codes.jpeg")
+```
+
+[@theobold-jrme]
+
+## 
+
+> "Fights over who gets to speak and whose words are recognized are indicative of power and status" (Johnson, 2002)
+
+. . .
+
+</br>
+
+The Influence Framework Engle et al. [-@engle2014]
+
+::: incremental
+::: {style="font-size: 0.75em;"}
+- treated as a credible source of information
+
+- ideas are positioned as high / low quality
+
+- access to the conversational floor
+
+- degree of spatial privilege
+:::
+:::
+
+## A Discourse Scorecard
+
+::: columns
+::: {.column width="20%"}
+**Proposal negotiation units (PNUs)**
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="75%"}
+::: {style="font-size: 0.75em;"}
+> begin when one group member makes a proposal bid for pursuing a mathematical approach or posing a directive to other group members
+:::
+:::
+:::
+
+. . .
+
+</br>
+
+::: {style="font-size: 0.75em;"}
+
+|         | Intellectual Merit | Intellectual Authority | Directive Authority | Influence |
+|:--------|:-----------:|:----------:|:------:|-------:|
+| Uma     | 6 (13)      | 19 (38)    | 0 (2)  |  0     |
+| Sean    | 38 (12)     | 47 (10)    | 4 (0)  |  4     |
+
+:::
+
+##  {background-color="#B6CADA"}
+
+::: {style="font-size: 3em; color: #000000;"}
+What can qualitative research teach us about oral exams?
+:::
+
+## 
+
+::: {style="font-size: 3em; color: #abdbe3;"}
+Oral exams 
+:::
+[@theobold-oral]
+
+</br>
+
+::: incremental
+1.  You are a qualitative researcher!
+
+2.  You are *both* the tool for data collection *and* data analysis.
+
+3.  Your analysis must be trustworthy
+:::
+
+## 
+
+::: {style="font-size: 3em; color: #FFFFFF;"}
+Collecting data
+:::
+
+::: incremental
+-   How will you decide what questions to ask?
+
+<!-- easy entry but can progress quickly -->
+
+-   How will you address the nature of how the data are collected?
+
+<!-- finding a comfortable space -->
+
+<!-- advice on how to handle anxiety -->
+
+<!-- how will you continue listening when someone doesn't articulate their thinking the way YOU would -->
+
+-   How will you address your own positionality?
+
+<!-- your influence on the exam -->
+:::
+
+<!-- image on woman giving speech to men? -->
+
+## 
+
+::: {style="font-size: 3em; color: #FFFFFF;"}
+Analyzing data
+:::
+
+::: incremental
+-   How do you decide how "well" someone did?
+
+<!-- choosing categories -->
+
+<!-- deciding before hand what "belongs" in each category -->
+
+-   How "stable" are your results?
+:::
+
+## 
+
+::: {style="font-size: 3em; color: #FFFFFF;"}
+Questions?
+:::
+
+```{r}
+#| fig-align: center
+#| out-width: 50%
+knitr::include_graphics("images/conversation.jpg")
+```
+
+## References

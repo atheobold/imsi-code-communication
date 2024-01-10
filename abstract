@@ -1,0 +1,9 @@
+PAPER ABSTRACT
+
+Despite the elevated importance of Data Science in Statistics, there exists limited research investigating how students learn the computing concepts and skills necessary for carrying out data science tasks. Computer Science educators have investigated how students debug their own code and how students reason through foreign code. While these studies illuminate different aspects of students’ programming behavior or conceptual understanding, a method has yet to be employed that can shed light on students’ learning processes. This type of inquiry necessitates qualitative methods, which allow for a holistic description of the skills a student uses throughout the computing code they produce, the organization of these descriptions into themes, and a comparison of the emergent themes across students or across time. In this article we share how to conceptualize and carry out the qualitative coding process with students’ computing code. Drawing on the Block Model to frame our analysis, we explore two types of research questions which could be posed about students’ learning.
+
+DUKE PRESENTATION
+
+Over the last 10 years, qualitative methods of investigation (e.g., grounded theory, phenomenology, archaeology) have become increasingly common for research in statistics education. However, we have yet to see researchers integrate these methodologies for research on the teaching and learning of data science. In this presentation I share two avenues of research in data science education which I believe are ripe for investigation with qualitative methods.
+
+First, I outline a qualitative methodology for analyzing the code students produce in their process of learning. Drawing on the Block Model (Schulte, 2008) to frame my analysis, I explore the R code produced by one graduate student throughout their research, describing their computing skills, organizing these descriptions into themes, and comparing emergent themes across time.
